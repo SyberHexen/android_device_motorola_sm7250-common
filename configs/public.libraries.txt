@@ -8,3 +8,5 @@ libOpenCL.so
 libnpu.so
 libhta_hexagon_runtime.so
 libadspd.so
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so
