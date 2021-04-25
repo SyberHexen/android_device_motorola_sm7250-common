@@ -409,11 +409,17 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
 # Power
+ifeq ($(filter kiev,$(TARGET_DEVICE)),)
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+    vendor.qti.hardware.perf@2.0.vendor
+else
 PRODUCT_PACKAGES += \
     android.hardware.power-service.sm7250-libperfmgr
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+endif
 
 # Protobuf
 PRODUCT_PACKAGES += \

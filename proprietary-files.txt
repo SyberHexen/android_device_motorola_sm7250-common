@@ -681,10 +681,6 @@ vendor/lib64/unnhal-acc-hvx.so
 vendor/bin/expat
 vendor/bin/motobox
 
-# Perf
-vendor/bin/msm_irqbalance
-vendor/lib64/libqti-perfd-client.so
-
 # Perf - QSMP
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
