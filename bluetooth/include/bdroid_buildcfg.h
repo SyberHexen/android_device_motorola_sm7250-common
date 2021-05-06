@@ -38,6 +38,8 @@ static inline const char* BtmGetDefaultName()
     char product_device[92];
     property_get("ro.product.device", product_device, "");
 
+    if (strstr(product_device, "kiev"))
+        return "Moto G 5G";
     if (strstr(product_device, "nairo"))
         return "Moto G 5G Plus";
     if (strstr(product_device, "racer"))
