@@ -385,8 +385,14 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     Tag \
-    SecureElement \
+    SecureElement
+ifneq (,$(filter kiev%,$(TARGET_PRODUCT)))
+PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.st
+else
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service
+endif
 
 # OMX
 PRODUCT_PACKAGES += \
