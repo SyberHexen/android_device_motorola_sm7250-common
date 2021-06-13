@@ -63,7 +63,6 @@ on post-fs
     setrlimit 8 67108864 67108864
 
 on late-fs
-    wait_for_prop hwservicemanager.ready true
 
     # Start services for bootanim
     start surfaceflinger
@@ -71,7 +70,6 @@ on late-fs
     start vendor.qti.hardware.display.composer
     start vendor.qti.hardware.display.allocator
 
-    exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
     # Boot time fs tune
     write /sys/block/dm-9/queue/read_ahead_kb 2048
