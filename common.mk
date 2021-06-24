@@ -468,8 +468,15 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge
+ifeq ($(filter kiev,$(TARGET_DEVICE)),)
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+else
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal
+endif
 
 # Servicetracker
 PRODUCT_PACKAGES += \
