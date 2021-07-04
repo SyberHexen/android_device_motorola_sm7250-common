@@ -933,30 +933,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 
-# Sensors
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/bin/sensors.qti
-vendor/bin/sscrpcd
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/init/init.vendor.sensors.rc
-vendor/etc/init/vendor.sensors.qti.rc
-vendor/etc/init/vendor.sensors.sscrpcd.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/libadspd.so
-vendor/lib/libsensorcal.so
-vendor/lib/libsensorslog.so
-vendor/lib/libssc.so
-vendor/lib/libssc_default_listener.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/libadspd.so
-vendor/lib64/libsensorcal.so
-vendor/lib64/libsensorslog.so
-vendor/lib64/libssc.so
-vendor/lib64/libssc_default_listener.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-
 # Servicetracker
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
