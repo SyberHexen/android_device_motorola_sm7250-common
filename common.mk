@@ -400,15 +400,13 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
 # Power
+ifneq (,$(filter kiev%,$(TARGET_PRODUCT)))
 PRODUCT_PACKAGES += \
     android.hardware.power-service.sm7250-libperfmgr
 
-ifeq ($(filter kiev,$(TARGET_DEVICE)),)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power-libperfmgr/powerhint-lagoon.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-else
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+else
 endif
 
 # QCOM
