@@ -22,33 +22,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#include <stdint.h>
-#include <string.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-int property_get(const char *key, char *value, const char *default_value);
-#ifdef __cplusplus
-}
-#endif
-
-static inline const char* BtmGetDefaultName()
-{
-    char product_device[92];
-    property_get("ro.product.device", product_device, "");
-
-    if (strstr(product_device, "nairo"))
-        return "Moto G 5G Plus";
-    if (strstr(product_device, "racer"))
-        return "Motorola Edge";
-    if (strstr(product_device, "smith"))
-        return "Motorola Razr 2";
-
-    // Fallback to Moto Generic
-    return "Motorola";
-}
-
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 // Disables read remote device feature
 #define BTM_WBS_INCLUDED TRUE
