@@ -129,8 +129,7 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libvolumelistener \
     tinymix \
-    libtinycompress \
-    libtinycompress.vendor
+    libtinycompress
 
 ifneq (,$(filter %nairo, $(TARGET_PRODUCT)))
 else
