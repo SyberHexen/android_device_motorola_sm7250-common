@@ -117,7 +117,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
-    audioadsprpcd \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
