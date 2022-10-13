@@ -31,6 +31,7 @@
 #define LOG_TAG "LocSvc_GnssAPIClient"
 #define SINGLE_SHOT_MIN_TRACKING_INTERVAL_MSEC (590 * 60 * 60 * 1000) // 590 hours
 
+#include <inttypes.h>
 #include <log_util.h>
 #include <loc_cfg.h>
 
@@ -380,7 +381,7 @@ void GnssAPIClient::requestCapabilities() {
 // callbacks
 void GnssAPIClient::onCapabilitiesCb(LocationCapabilitiesMask capabilitiesMask)
 {
-    LOC_LOGD("%s]: (%02x)", __FUNCTION__, capabilitiesMask);
+    LOC_LOGD("%s]: (%" PRIu64 ")", __FUNCTION__, capabilitiesMask);
     mLocationCapabilitiesMask = capabilitiesMask;
     mLocationCapabilitiesCached = true;
 
@@ -647,7 +648,7 @@ void GnssAPIClient::onGnssNmeaCb(GnssNmeaNotification gnssNmeaNotification)
     auto gnssCbIface_2_1(mGnssCbIface_2_1);
     mMutex.unlock();
 
-    if (gnssCbIface != nullptr || gnssCbIface_2_0 != nullptr || gnssCbIface_2_1 != nullptr) {
+    if (gnssCbIface != nullptr || gnssCbIface_2_0 != nullptr| gnssCbIface_2_1 != nullptr) {
         const std::string s(gnssNmeaNotification.nmea);
         std::stringstream ss(s);
         std::string each;
