@@ -34,6 +34,9 @@ function blob_fixup() {
     system_ext/etc/permissions/moto-telephony.xml)
         sed -i "s|system|system/system_ext|" "${2}"
         ;;
+    vendor/etc/permissions/com.motorola.androidx.camera.extensions.xml)
+        sed -i "s|system_ext|product|" "${2}"
+        ;;
     esac
 }
 
