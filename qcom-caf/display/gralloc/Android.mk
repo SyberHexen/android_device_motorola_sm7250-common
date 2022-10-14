@@ -57,6 +57,10 @@ else ifeq ($(TARGET_USES_YCRCB_VENUS_CAMERA_PREVIEW),true)
     LOCAL_CFLAGS              += -DUSE_YCRCB_CAMERA_PREVIEW_VENUS
 endif
 
+ifeq ($(TARGET_NO_RAW10_CUSTOM_FORMAT),true)
+    LOCAL_CFLAGS              += -DNO_RAW10_CUSTOM_FORMAT
+endif
+
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_SRC_FILES               := gr_utils.cpp gr_adreno_info.cpp gr_camera_info.cpp
 include $(BUILD_SHARED_LIBRARY)
@@ -125,7 +129,6 @@ LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes)
 LOCAL_HEADER_LIBRARIES        := display_headers
 LOCAL_SHARED_LIBRARIES        := $(common_libs) \
                                   libhidlbase \
-                                  libhidltransport \
                                   libqdMetaData \
                                   libgrallocutils \
                                   libgralloccore \
@@ -138,6 +141,11 @@ LOCAL_SHARED_LIBRARIES        := $(common_libs) \
                                   vendor.qti.hardware.display.mapperextensions@1.1 \
                                   android.hardware.graphics.mapper@3.0 \
                                   android.hardware.graphics.mapper@4.0
+
+ifeq ($(shell expr $(PLATFORM_SDK_VERSION) \<= 28), 1)
+LOCAL_SHARED_LIBRARIES += libhidltransport
+endif
+
 LOCAL_CFLAGS                  := $(common_flags) $(qmaa_flags) -DLOG_TAG=\"qdgralloc\" -Wno-sign-conversion \
                                  -D__QTI_DISPLAY_GRALLOC__
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
