@@ -24,8 +24,8 @@ source "${HELPER}"
 function blob_fixup() {
     case "${1}" in
     # libgui shim
-    system_ext/lib64/lib-imsvideocodec.so | system_ext/lib64/libimsmedia_jni.so)
-        "${PATCHELF}" --add-needed libgui_shim.so "${2}"
+    system_ext/lib/lib-imsvideocodec.so | system_ext/lib64/lib-imsvideocodec.so)
+        "${PATCHELF}" --print-needed "${2}" |grep -q libgui_shim || "${PATCHELF}" --add-needed libgui_shim.so "${2}"
         ;;
     # Fix xml version
     product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
