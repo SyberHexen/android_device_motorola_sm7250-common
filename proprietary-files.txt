@@ -145,12 +145,12 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/etc/init/cnd.rc
-vendor/lib/libcne.so
+vendor/lib/libcne.so;DISABLE_CHECKELF
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
 vendor/lib/libwms.so
-vendor/lib/libwqe.so
+vendor/lib/libwqe.so;DISABLE_CHECKELF
 vendor/lib/libxml.so
 vendor/lib/vendor.qti.data.factory@2.0.so
 vendor/lib/vendor.qti.data.factory@2.1.so
@@ -158,12 +158,12 @@ vendor/lib/vendor.qti.data.slm@1.0.so
 vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib/vendor.qti.hardware.slmadapter@1.0.so
-vendor/lib64/libcne.so
+vendor/lib64/libcne.so;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwms.so
-vendor/lib64/libwqe.so
+vendor/lib64/libwqe.so;DISABLE_CHECKELF
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.data.factory@2.1.so
@@ -190,8 +190,8 @@ vendor/etc/init/hw/init.mmi.charge_only.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # Display
--system_ext/lib/libsdm-disp-apis.qti.so
--system_ext/lib64/libsdm-disp-apis.qti.so
+-system_ext/lib/libsdm-disp-apis.qti.so;DISABLE_CHECKELF
+-system_ext/lib64/libsdm-disp-apis.qti.so;DISABLE_CHECKELF
 -vendor/app/com.qualcomm.qti.gpudrivers.lito.api30/com.qualcomm.qti.gpudrivers.lito.api30.apk
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
@@ -214,8 +214,8 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # Display postprocessing
-system_ext/lib/vendor.display.color@1.0.so
-system_ext/lib64/vendor.display.color@1.0.so
+system_ext/lib/vendor.display.color@1.0.so;MODULE=vendor.display.color@1.0-se
+system_ext/lib64/vendor.display.color@1.0.so;MODULE=vendor.display.color@1.0-se
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libdisp-aba.so
@@ -244,10 +244,10 @@ system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
-vendor/bin/dpmQmiMgr
+vendor/bin/dpmQmiMgr;DISABLE_CHECKELF
 vendor/etc/init/dpmQmiMgr.rc
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
-vendor/lib64/libdpmqmihal.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0-vendor
+vendor/lib64/libdpmqmihal.so;DISABLE_CHECKELF
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
@@ -294,11 +294,11 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # FM
 system_ext/lib/fm_helium.so
-system_ext/lib/libfm-hci.so
+system_ext/lib/libfm-hci.so;DISABLE_CHECKELF
 system_ext/lib64/fm_helium.so
-system_ext/lib64/libfm-hci.so
-system_ext/lib/vendor.qti.hardware.fm@1.0.so
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+system_ext/lib64/libfm-hci.so;DISABLE_CHECKELF
+system_ext/lib/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0-se
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0-se
 vendor/bin/fm_qsoc_patches
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib/vendor.qti.hardware.fm@1.0.so
@@ -314,7 +314,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GPS
 vendor/bin/garden_app
 vendor/bin/loc_launcher
-vendor/bin/lowi-server
+vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/mlid
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
@@ -479,9 +479,9 @@ vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxSwVdec.so
-vendor/lib/libOmxSwVencMpeg4.so
-vendor/lib/libOmxVpp.so
+vendor/lib/libOmxSwVdec.so;DISABLE_CHECKELF
+vendor/lib/libOmxSwVencMpeg4.so;DISABLE_CHECKELF
+vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libqcbor.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
@@ -510,9 +510,9 @@ vendor/lib64/libOmxApeDecSw.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxSwVdec.so
-vendor/lib64/libOmxSwVencMpeg4.so
-vendor/lib64/libOmxVpp.so
+vendor/lib64/libOmxSwVdec.so;DISABLE_CHECKELF
+vendor/lib64/libOmxSwVencMpeg4.so;DISABLE_CHECKELF
+vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libswvdec.so
@@ -678,9 +678,9 @@ vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblog_vendor.so
 vendor/lib64/liblqe.so
-vendor/lib64/libmdmcutback.so
+vendor/lib64/libmdmcutback.so;DISABLE_CHECKELF
 vendor/lib64/libmdmdetect.so
-vendor/lib64/libmotext_inf.so
+vendor/lib64/libmotext_inf.so;DISABLE_CHECKELF
 vendor/lib64/libmmosal.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
@@ -702,7 +702,7 @@ vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-logger.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
-vendor/lib64/libril-qcril-hook-oem.so
+vendor/lib64/libril-qcril-hook-oem.so;DISABLE_CHECKELF
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
@@ -776,23 +776,23 @@ system_ext/framework/vendor.qti.hardware.data.connection-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/lib/lib-imsvideocodec.so
-system_ext/lib/lib-imsvt.so
+system_ext/lib/lib-imsvt.so;DISABLE_CHECKELF
 system_ext/lib/lib-imsvtextutils.so
 system_ext/lib/lib-imsvtutils.so
 system_ext/lib/libdiag_system.so
 system_ext/lib/libimscamera_jni.so
 system_ext/lib/libimsmedia_jni.so
-system_ext/lib/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0-se
 system_ext/lib64/lib-imsvideocodec.so
-system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvt.so;DISABLE_CHECKELF
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0-se
 vendor/bin/ims_rtp_daemon
-vendor/bin/imsdatadaemon
+vendor/bin/imsdatadaemon;DISABLE_CHECKELF
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
 vendor/etc/init/ims_rtp_daemon.rc
