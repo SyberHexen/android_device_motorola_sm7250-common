@@ -475,7 +475,8 @@ QCOM_SOONG_NAMESPACE := $(LOCAL_PATH)
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/qcom-caf/wlan
 
 # Telephony
 PRODUCT_PACKAGES += \
