@@ -121,7 +121,7 @@ system_ext/framework/vendor.qti.data.factory-V2.1-java.jar
 system_ext/framework/vendor.qti.data.factory-V2.2-java.jar
 system_ext/framework/vendor.qti.data.factory-V2.3-java.jar
 system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar
--vendor/app/CneApp/CneApp.apk
+-vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
