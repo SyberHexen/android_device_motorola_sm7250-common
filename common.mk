@@ -427,6 +427,8 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libqsap_sdk \
     librmnetctl \
+    libsqlite.vendor:64 \
+    libsysutils.vendor:64 \
     libxml2
 
 PRODUCT_PACKAGES += \
