@@ -138,6 +138,8 @@ PRODUCT_PACKAGES += \
     libtinycompress
 
 ifneq (,$(filter %kiev %nairo, $(TARGET_PRODUCT)))
+PRODUCT_PACKAGES += \
+    firmware_aw_cali.bin_symlink
 else
 PRODUCT_PACKAGES += \
     audio.primary.lito \
