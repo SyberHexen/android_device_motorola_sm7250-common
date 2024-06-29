@@ -558,7 +558,7 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # OEM
-vendor/bin/motobox
+vendor/bin/motobox;SYMLINK=vendor/bin/expat
 
 # Perf
 vendor/bin/msm_irqbalance
