@@ -2,7 +2,7 @@
 audio.deep_buffer.media=true
 audio.offload.video=true
 persist.vendor.audio.dualmic.config=endfire
-persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicecall?=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=false
