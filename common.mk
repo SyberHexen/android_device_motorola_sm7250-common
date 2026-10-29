@@ -53,6 +53,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
+    audio.primary.lito \
     audio.r_submix.default \
     audio.usb.default
 
